@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[35,)"
+license="All rights reserved"
+[[mods]]
+modId="amcmod"
+version="1.0.0"
+displayName="A Minecraft Mod"
+credits="Thanks to TurtyWurty for helping me learn how to mod!"
+authors="foonicular"
+
+description='''
+A mod for Minecraft.
+'''
+
+
+
+[[dependencies.amcmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[35,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.amcmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.4,1.17)"
+    ordering="NONE"
+    side="BOTH"

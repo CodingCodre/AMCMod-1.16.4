@@ -1,6 +1,7 @@
 package io.github.foonicular.amcmod.core.init;
 
 import io.github.foonicular.amcmod.Main;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,4 +14,7 @@ public class ItemInit {
 	public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
 			() -> new Item(new Item.Properties().group(Main.TAB)));
 
+	// Block Items
+	public static final RegistryObject<BlockItem> RUBY_BLOCK = ITEMS.register("ruby_block", () -> new BlockItem(BlockInit.RUBY_BLOCK.get(), new Item.Properties().group(Main.TAB)));
+	
 }

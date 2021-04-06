@@ -5,10 +5,12 @@ import org.apache.logging.log4j.Logger;
 
 import io.github.foonicular.amcmod.core.init.BlockInit;
 import io.github.foonicular.amcmod.core.init.ItemInit;
+import io.github.foonicular.amcmod.world.OreGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -28,6 +30,8 @@ public class Main {
 
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, OreGeneration::generateOverworldOres);
         
         MinecraftForge.EVENT_BUS.register(this);
         
